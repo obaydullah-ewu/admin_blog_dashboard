@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,7 +21,7 @@ class HomePageController extends Controller
             $data['title'] = 'Dashboard';
             $data['subtitle'] = 'Dashboard';
             $data['navUsersActiveClass'] = 'active';
-
+            $data['user'] = User::find(Auth::user()->id);
             /*Charts*/
             $month_names = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
@@ -50,6 +51,7 @@ class HomePageController extends Controller
             $data['day_value'] =  json_encode($data['day_value']);
             $data['monthly_data'] = $monthly_data;
 
+            $data['total_blog'] = count(Blog::all());
 
 
 

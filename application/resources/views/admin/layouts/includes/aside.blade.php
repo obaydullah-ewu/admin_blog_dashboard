@@ -4,7 +4,7 @@
         <!--begin::Logo-->
         @if(\Illuminate\Support\Facades\Auth::user()->role_id == 1)
             <a href="{{ url('/') }}"><h3 style="color: red">Admin Panel</h3>
-                @elseif(\Illuminate\Support\Facades\Auth::user()->role == 2)
+                @elseif(\Illuminate\Support\Facades\Auth::user()->role_id == 2)
                     <a href="{{ url('/') }}"><h3 style="color: red">User Panel</h3>
                         @endif
                         {{--            <img alt="Logo" src="assets/media/logos/logo-default.svg" class="h-15px logo" />--}}

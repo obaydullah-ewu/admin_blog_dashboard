@@ -246,7 +246,7 @@
                                                                     <div class="row">
                                                                         <!--begin::Col-->
                                                                         <div class="col-lg-8 fv-row">
-                                                                            <input type="text" name="email" class="form-control form-control-lg form-control-solid " placeholder="Email" value="{{ $user->email }}" required/>
+                                                                            <input type="text" name="email" class="form-control form-control-lg form-control-solid " placeholder="e.g: example@example.com" value="{{ $user->email }}" required/>
                                                                         </div>
                                                                         <!--end::Col-->
                                                                         <!--end::Col-->
@@ -496,7 +496,7 @@
                                         <div class="row">
                                             <!--begin::Col-->
                                             <div class="col-lg-8 fv-row">
-                                                <input type="text" name="email" class="form-control form-control-lg form-control-solid " placeholder="Email" value="" required/>
+                                                <input type="text" name="email" class="form-control form-control-lg form-control-solid " placeholder="example@example.com" value="" required/>
                                             </div>
                                             <!--end::Col-->
                                             <!--end::Col-->

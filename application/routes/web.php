@@ -24,6 +24,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/this-month', [\App\Http\Controllers\DashboardController::class,'indexOfThisMonth']);
     Route::get('/admin/this-year', [\App\Http\Controllers\DashboardController::class,'indexOfThisYear']);
 
+    Route::get('/user/today', [\App\Http\Controllers\UserDashboardController::class,'indexOfToday']);
+    Route::get('/user/this-week', [\App\Http\Controllers\UserDashboardController::class,'indexOfThisWeek']);
+    Route::get('/user/this-month', [\App\Http\Controllers\UserDashboardController::class,'indexOfThisMonth']);
+    Route::get('/user/this-year', [\App\Http\Controllers\UserDashboardController::class,'indexOfThisYear']);
+
 //    Route::resource('/', \App\Http\Controllers\HomePageController::class);
     Route::resource('user', \App\Http\Controllers\UserHomePageController::class);
     Route::get('user-list',[\App\Http\Controllers\UserHomePageController::class, 'userList'])->name('user.list');
